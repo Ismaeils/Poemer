@@ -1,0 +1,35 @@
+<h1 mat-dialog-title>Settings</h1>
+<div mat-dialog-content>
+  <mat-accordion>
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          {{user.name}}
+        </mat-panel-title>
+        <mat-panel-description>
+          
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+
+      <ng-template matExpansionPanelContent>
+        <p>Email: {{user.email}}</p>
+        <button mat-flat-button color="warn">Delete Account</button>
+      </ng-template>
+
+      
+    </mat-expansion-panel>
+  </mat-accordion>
+  
+
+  <!-- <mat-selection-list >
+    <mat-checkbox mat-list-item [(ngModel)]="typewriterSoundState"> Typewriter Sound</mat-checkbox>
+  </mat-selection-list> -->
+  <mat-action-list>
+    <mat-checkbox (change)="updateUserSettings($event.checked)" [(ngModel)]="user.typewriterSound"> Typewriter Sound</mat-checkbox>
+    <button mat-list-item (click)="openDialog()"> Change Background </button>
+    <button mat-list-item> Logout </button>
+  </mat-action-list>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Close</button>
+</div>

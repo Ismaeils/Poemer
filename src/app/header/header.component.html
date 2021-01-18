@@ -1,0 +1,16 @@
+<mat-toolbar>
+    <h3 class="logo">Poemer</h3>
+    <div class="spacer"></div>
+    <button *ngIf="isNote" mat-button (click)="navigateToMyNotes()">My Notes</button>
+    <button *ngIf="!isNote" mat-button (click)="addNewNote()"><mat-icon style="font-size: 10pt;">add_comment</mat-icon>New Memo</button>
+    <!-- [matMenuTriggerFor]="menu" -->
+
+    <button (click)="openDialog()"  mat-icon-button color="accent">
+        <mat-icon>settings</mat-icon>
+    </button>
+
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="openDialog()">Settings</button>
+        <button mat-menu-item>Logout</button>
+    </mat-menu>
+</mat-toolbar>

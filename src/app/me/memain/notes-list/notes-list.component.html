@@ -1,0 +1,11 @@
+<mat-list id="listMe" class="list-horizontal">
+    <!-- <cdk-virtual-scroll-viewport itemSize="100" (scrolledIndexChange)="getNextBatch($event)">
+        <mat-list-item *cdkVirtualFor="let note of notes" class="animate__fadeInDown">
+            <app-note-item [note] ="note"></app-note-item>
+        </mat-list-item>
+    </cdk-virtual-scroll-viewport> -->
+
+    <mat-list-item *ngFor="let note of notes" >
+        <app-note-item [note] ="note"></app-note-item>
+    </mat-list-item>
+</mat-list>

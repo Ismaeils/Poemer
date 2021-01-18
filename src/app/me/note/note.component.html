@@ -1,0 +1,11 @@
+<div class="main">
+    <div class="margined">
+        <div class="noteContainer">
+            <input (input)="onTitleUpdate($event.target.value)" type="text" matInput placeholder="Title" value="{{note.title}}">
+            <textarea (input)="onBodyUpdate($event.target.value)" matInput placeholder="Write" value="{{note.body}}"></textarea>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <p style="white-space: pre-line">{{savedFlag}}</p>
+</div>

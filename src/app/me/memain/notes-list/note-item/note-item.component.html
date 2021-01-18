@@ -1,0 +1,20 @@
+<div>
+    <mat-card>
+        <div class="customCardHeader">
+            <mat-card-title (click)="navigateToNote()">{{note.title}}</mat-card-title>
+            <button [matMenuTriggerFor]="noteMenu" mat-icon-button aria-label="Example icon button with a vertical three dot icon">
+                <mat-icon>more_vert</mat-icon>
+            </button>
+        </div>
+
+        <mat-card-content (click)="navigateToNote()"><p>
+            {{note.body}}
+        </p></mat-card-content>
+
+        <mat-menu #noteMenu="matMenu">
+            <button mat-menu-item (click)="deleteNote()">Delete</button>
+            <button mat-menu-item>Whatever</button>
+        </mat-menu>
+
+    </mat-card>
+</div>

@@ -1,0 +1,23 @@
+.spacer{
+    flex: 1 1 auto;
+}
+
+.mat-fab{
+    height: 40px;
+    width: 40px;
+    font-size: 7pt;
+}
+.mat-button-wrapper {
+    padding: 0 !important;
+}
+.mat-toolbar{
+    background-color: rgba(26, 26, 26, 0.6);
+}
+
+.you .mat-button-wrapper{
+    padding: 0 !important;
+}
+
+.mat-icon{
+    color: white;
+}
