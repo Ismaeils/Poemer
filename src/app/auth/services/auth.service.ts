@@ -28,7 +28,7 @@ export class AuthService{
                 
             }
         }
-        this.http.get('http://peomerapi.herokuapp.com/api/auth/google', options).subscribe(res=> console.log(res));
+        this.http.get('https://peomerapi.herokuapp.com/api/auth/google', options).subscribe(res=> console.log(res));
     }
     
 }
