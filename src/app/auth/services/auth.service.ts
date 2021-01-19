@@ -12,7 +12,7 @@ export class AuthService{
             this.http
             .get<any>('url', {observe: 'response'})
             .subscribe(resp => {
-                console.log(resp.headers.get('Authorization'));
+                //console.log(resp.headers.get('Authorization'));
                 if(resp.headers.get('Authorization')){
                     resolve(true);
                 }else{
