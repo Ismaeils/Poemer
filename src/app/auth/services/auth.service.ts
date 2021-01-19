@@ -8,11 +8,25 @@ export class AuthService{
     }
 
     isAuthed(){
-        const promise = new Promise((resolve,reject)=>{
-            setTimeout(()=>{
-                resolve(this.loggedIn);
-            }, 800);
+        const promise = new Promise((resolve, reject)=>{
+            this.http
+            .get<any>('url', {observe: 'response'})
+            .subscribe(resp => {
+                console.log(resp.headers.get('Authorization'));
+                if(resp.headers.get('Authorization')){
+                    resolve(true);
+                }else{
+                    resolve(false);
+                }
+            });
         });
+
+        // const promise = new Promise((resolve,reject)=>{
+        //     setTimeout(()=>{
+        //         resolve(this.loggedIn);
+        //     }, 800);
+        // });
+
         return promise;
     }
     login(){
